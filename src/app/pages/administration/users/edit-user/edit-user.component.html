@@ -1,0 +1,89 @@
+<!-- Edit USER -->
+<div>
+
+
+  <form (ngSubmit)="typeSubmit()" [formGroup]="typeValidationForm">
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label class="form-label">Nom</label>
+          <input type="text" class="form-control" formControlName="text"
+                 [ngClass]="{'is-invalid': typesubmit && type.text.errors}" placeholder="Nom"/>
+          <div *ngIf="typesubmit && type.text.errors" class="invalid-feedback">
+            <span *ngIf="type.text.errors.required">Champs Obligateur </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label class="form-label">Prénom</label>
+          <input type="text" class="form-control" formControlName="text"
+                 [ngClass]="{'is-invalid': typesubmit && type.text.errors}" placeholder="Prénom"/>
+          <div *ngIf="typesubmit && type.text.errors" class="invalid-feedback">
+            <span *ngIf="type.text.errors.required">Champs Obligateur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="text" class="form-control" formControlName="text"
+             [ngClass]="{'is-invalid': typesubmit && type.text.errors}" placeholder="Email"/>
+      <div *ngIf="typesubmit && type.text.errors" class="invalid-feedback">
+        <span *ngIf="type.text.errors.required">Champs Obligateur</span>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label class="form-label">Organisation</label>
+          <select class="form-select">
+            <option selected>Sousse</option>
+            <option>Monastir</option>
+            <option>Mateur</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label class="form-label">Rôle</label>
+          <select class="form-select">
+            <option selected>Adminitrateur</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+            <option>HR PS</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-wrap gap-2 btn-edit">
+      <button type="submit" class="btn btn-primary waves-effect waves-light">
+        Ajouter
+      </button>
+      <button type="reset" class="btn btn-secondary waves-effect">
+        Annuler
+      </button>
+    </div>
+  </form>
+
+</div>
